@@ -15,10 +15,26 @@ const routes = [
     path: "/auth",
     component: () => import("layouts/MainLayout.vue"),
     children: [
-      { path: "patients", component: () => import("pages/PatientsPage.vue") },
-      { path: "", component: () => import("pages/AppointmentPage.vue") },
-      { path: "", component: () => import("pages/ConsultationPage.vue") },
-      { path: "", component: () => import("pages/ChatsPage.vue") },
+      {
+        path: "patients",
+        component: () => import("pages/patients/IndexPage.vue"),
+        name: "Patients",
+      },
+      {
+        path: "appointment",
+        component: () => import("pages/AppointmentsPage.vue"),
+        name: "Appointment",
+      },
+      {
+        path: "consultation",
+        component: () => import("pages/ConsultationsPage.vue"),
+        name: "Consultation",
+      },
+      {
+        path: "chats",
+        component: () => import("pages/ChatsPage.vue"),
+        name: "Chats",
+      },
     ],
   },
 
