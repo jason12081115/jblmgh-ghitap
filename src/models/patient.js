@@ -1,5 +1,5 @@
 import { QInput, QSelect } from "quasar";
-import { createInputFields } from "models/functions";
+import { createInputFields } from "./functions";
 
 const model = [
   {
@@ -37,4 +37,4 @@ const model = [
   },
 ];
 
-const createFields = createInputFields(model);
+export const createFields = () => createInputFields(model);
