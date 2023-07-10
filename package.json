@@ -12,7 +12,8 @@
     "dev": "quasar dev",
     "build": "quasar build",
     "build:pwa": "quasar build -m pwa",
-    "new:boot": "quasar new boot"
+    "new:boot": "quasar new boot",
+    "new:layout": "quasar new layout"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
