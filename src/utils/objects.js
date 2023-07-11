@@ -1,4 +1,4 @@
-import { isObject } from "./index.js";
+import { isObject } from "./index";
 
 /**
  * Recursively replaces properties in an object with the corresponding properties from a replacement object.
