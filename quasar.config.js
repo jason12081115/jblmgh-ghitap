@@ -75,7 +75,8 @@ module.exports = configure(function (/* ctx */) {
         FIREBASE_PROJECT_ID: "ghitap-firebase",
         FIREBASE_STORAGE_BUCKET: "ghitap-firebase.appspot.com",
         FIREBASE_MESSAGING_SENDER_ID: "430850687110",
-        FIREBASE_APP_ID: "1:430850687110:web:b4717bda2d6f952ed81107"
+        FIREBASE_APP_ID: "1:430850687110:web:b4717bda2d6f952ed81107",
+        API_URL: "http://localhost:8000"
       },
       // rawDefine: {}
       // ignorePublicFolder: true,
