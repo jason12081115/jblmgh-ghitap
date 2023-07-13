@@ -7,6 +7,7 @@ import {
 } from "vue-router";
 import routes from "./routes";
 import { checkHospitalUser } from 'src/services/auth'
+import middlewarePipeline from "./middlewarePipeline";
 
 /*
  * If not building with SSR mode, you can
@@ -37,7 +38,17 @@ export default route(function (/* { store, ssrContext } */) {
   Router.beforeEach((to, from, next) => {
     checkHospitalUser()
 
-    return next();
+    const middleware = to.meta.middleware;
+    const context = { to, from, next };
+
+    if (!middleware) {
+      return next();
+    }
+
+    middleware[0]({
+      ...context,
+      next: middlewarePipeline(context, middleware, 1),
+    });
   })
 
   return Router;
