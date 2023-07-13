@@ -54,6 +54,8 @@ module.exports = configure(function (/* ctx */) {
         node: "node16",
       },
 
+      env: require('dotenv').config().parsed,
+
       alias: {
         utils: path.resolve(__dirname, "./src/utils"),
         models: path.resolve(__dirname, "./src/models"),
@@ -68,16 +70,16 @@ module.exports = configure(function (/* ctx */) {
 
       // publicPath: '/app/',
       // analyze: true,
-      env: {
-        APP_NAME: "Quasar App",
-        FIREBASE_API_KEY: "AIzaSyBCHmFTAcGA5gi8IXe8uhbuOJGF3DrAzqQ",
-        FIREBASE_AUTH_DOMAIN: "ghitap-firebase.firebaseapp.com",
-        FIREBASE_PROJECT_ID: "ghitap-firebase",
-        FIREBASE_STORAGE_BUCKET: "ghitap-firebase.appspot.com",
-        FIREBASE_MESSAGING_SENDER_ID: "430850687110",
-        FIREBASE_APP_ID: "1:430850687110:web:b4717bda2d6f952ed81107",
-        API_URL: "http://localhost:8000"
-      },
+      // env: {
+      //   APP_NAME: "Quasar App",
+      //   FIREBASE_API_KEY: "AIzaSyBCHmFTAcGA5gi8IXe8uhbuOJGF3DrAzqQ",
+      //   FIREBASE_AUTH_DOMAIN: "ghitap-firebase.firebaseapp.com",
+      //   FIREBASE_PROJECT_ID: "ghitap-firebase",
+      //   FIREBASE_STORAGE_BUCKET: "ghitap-firebase.appspot.com",
+      //   FIREBASE_MESSAGING_SENDER_ID: "430850687110",
+      //   FIREBASE_APP_ID: "1:430850687110:web:b4717bda2d6f952ed81107",
+      //   API_URL: "http://localhost:8000"
+      // },
       // rawDefine: {}
       // ignorePublicFolder: true,
       // minify: false,

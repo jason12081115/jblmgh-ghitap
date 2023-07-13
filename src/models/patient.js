@@ -29,6 +29,7 @@ const model = [
       label: "Hospital Number",
     },
     col: 6,
+    authOnly: true,
   },
   {
     component: CustomInput,
@@ -110,7 +111,7 @@ const model = [
     model: "email",
     attrs: {
       label: "Email Address",
-      rules: [emailValidator],
+      rules: [requiredValidator, emailValidator],
     },
     col: 6,
   },
